@@ -1,0 +1,148 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section{
+    width: 60vw;
+    height: 600px;
+    background-color: #fafafa;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5rem;
+    gap: 5px;
+}
+.section::after , .section::before{
+    content: "";
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+
+}
+.section::after {
+    bottom: -130px;
+    left: -130px;
+}
+.section::before {
+    top: -130px;
+    right: -130px;
+
+}
+.section div{
+    padding: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 1.5em;
+ text-align: center;
+}
+ion-icon{
+    color: blue;
+}
+.section div>*{
+    margin-top: 20px;
+}
+.section div>p{
+    font-size: 0.75em;
+}
+@media all and (max-width:425px) {
+    .section{
+        flex-direction: column;
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+    p{
+        display: none;
+    }
+    .section::after , .section::before{
+        content: "";
+        width: 0px;
+        height: 0px;
+
+    
+    }
+}
+@media all and (min-width:426px){
+
+    .section{
+        flex-direction: column;
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+
+
+    .section::after , .section::before{
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+    
+    }
+}
+
+@media all and (min-width:760px){
+    
+    .section div{
+        font-size: 1rem;
+    }
+    .section::after , .section::before{
+        content: "";
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+    
+    }
+    .section::after {
+        bottom: -70px;
+        left: -70px;
+    }
+    .section::before {
+        top: -70px;
+        right: -70px;
+    
+    }
+}
+@media all and (min-width:1024px){
+    .section{
+        flex-direction: row;
+        padding: 3rem;
+    }
+    .section::after , .section::before{
+        content: "";
+        width: 250px;
+        height: 250px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+    
+    }
+    .section::after {
+        bottom: -130px;
+        left: -130px;
+    }
+    .section::before {
+        top: -130px;
+        right: -130px;
+    
+    }
+    .section div{
+        font-size: 2em;
+       padding: 5rem 2rem;
+    }
+}

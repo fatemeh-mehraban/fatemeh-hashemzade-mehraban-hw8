@@ -6,11 +6,11 @@ body{
 }
 .section{
     background-color: rgba(0, 0, 0, 0.179);
-    width: 40vw;
+    width: 40rem;
     height: 500px;
     display: grid;
-    /* grid-template-columns: repeat(4,1fr);
-     grid-template-rows: auto auto auto;  */
+     grid-template-columns: repeat(4,1fr);
+     /* grid-template-rows: auto auto auto;  */
     grid-template-areas:
     'a b c d'
     'e b g d'
@@ -23,45 +23,105 @@ div{
 }
 .box1{
     background-image: url(img/1.jpeg);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
     grid-area: a;
 }
 .box2{
-    background-image: url(img/5.jpg);
-    background-size: cover;
+    background-image: url(img/15.jfif);
+    background-size: 100% 100%;
+    background-position: center;
     grid-area: b;
 }
 .box3{
-    background-image: url(img/2.avif);
-    background-size: cover;
+    background-image: url(img/13.avif);
+    background-size: 100% 100%;
+    background-position: center;
     grid-area: c;
 }
 .box4{
-    background-image: url(img/3.jpg);
-    background-size: cover;
+    background-image: url(img/12.jfif);
+    background-size: 100% 100%;
+    background-position: center;
     grid-area: d;
 }
 .box5{
-    background-image: url(img/7.jfif);
-    background-size:cover;
+    background-image: url(img/21.jpg);
+
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
     grid-area: e;
 }
 .box6{
-    background-image: url(img/5.jpg);
-    background-size: cover;
+    background-image: url(img/15.jfif);
+    background-size: 100% 100%;
+    background-position: center;
     height: 96%;
   grid-area: f;
 }
 .box7{
     background-image: url(img/1.jpeg);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
     height: 96%;
    grid-area: g;
 }
 .box8{
     background-image: url(img/4.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
     height: 89%;
     grid-area: h;
+}
+
+@media all and (max-width:300px){
+    .section{
+        height: 90rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'a'
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+        'g'
+        'h'
+    }
+
+}
+@media all and (min-width:301px) and (max-width:400px){
+    .section{
+       
+        height: 80rem;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 10px;
+        grid-template-areas:
+        'a a'
+        'b e'
+        'b f'
+        'g h'
+        'c d'
+   
+    }
+}
+@media all and (min-width:401px) and (max-width:680px) {
+    .section{
+        width: 20rem;
+        height: 100rem;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-areas:
+        'a b'
+        'e e'
+        'g f'
+        'g h'
+        'c d'
+   
+    }
+    
+}
+@media all and(min-width:768) and (max-width:922) {
+    
 }
